@@ -1,5 +1,5 @@
 # inkscrpt_analytics
-Business and financial analytical tools for INKSCRPT, a small business based on illustrations, calligraphy &amp; multi-media art by Erika Flores (@inkscrpt).
+Business and financial analytical tools for INKSCRPT, a small business based on illustrations, calligraphy &amp; multi-media art by Erika Flores (inkscrpt.com).
 
 
 To run, enter the command
