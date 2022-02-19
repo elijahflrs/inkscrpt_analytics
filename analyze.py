@@ -4,7 +4,7 @@ import os, sys
 
 
 
-def load_data(filename, foldername='order_history'):
+def load_data(filename, foldername='raw_purchases'):
     # Loads excel file to analyze.
 
     filepath = os.path.join(os.getcwd(), foldername, filename)
