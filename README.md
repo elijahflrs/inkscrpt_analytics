@@ -4,7 +4,7 @@ Business and financial analytical tools for [INKSCRPT](https://inkscrpt.com), a 
 
 To run, enter the command
 ```
-analyze.py [filename] [startdate] [enddate]
+analyze.py [filename] [startdate] [enddate] [True/False for saving user receipts]
 ```
 
 ## Ready, but in progress for public release:

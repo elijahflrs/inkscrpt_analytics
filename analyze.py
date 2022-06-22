@@ -65,11 +65,23 @@ def save_totals(df, startdate, enddate, savefolder='results'):
 
 
 
+def save_user_receipts(df, startdate, enddate, savefolder='results\\receipts'):
+    # Saves the full list of purchases for each unique name.
+
+    namelist = df['to'].unique()
+
+    for name in namelist:
+        filename = str(startdate) + '-' + str(enddate) + '_' + str(name) + '_TOTALS.xlsx'
+        df[df.to == name].to_excel(os.path.join(os.getcwd(), savefolder, filename))
+
+
+
+
 def main():
-    # Arguments: datafile, startdate, enddate
+    # Arguments: datafile, startdate, enddate, [True/False for saving user receipts]
 
     # get arguments
-    filename, startdate, enddate = sys.argv[1:]
+    filename, startdate, enddate = sys.argv[1:-1]
 
     # process data
     df = load_data(filename)
@@ -78,6 +90,8 @@ def main():
     df_totals = get_final_amount(df_cropped)
     save_totals(df_totals, startdate, enddate)
 
+    if bool(sys.argv[-1]) == True:
+        save_user_receipts(df, startdate, enddate)
 
 
 
